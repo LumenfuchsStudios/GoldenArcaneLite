@@ -1,11 +1,12 @@
-## # Ayden_Foxx | August 31st, 2024
+## # Ayden_Foxx | August 31st - September 1st, 2024
 # Displays a chat message, audiovisual effects, and despawns Golden Arrow.
 
-tellraw @a[distance=..32] { "text": "Golden Arrow returns to the shadows...", "color": "gray" }
-tellraw @a[distance=32..] { "text": "The darkness recedes...", "color": "gray" }
+# `distance` is used to only target living players within the same dimension.
+tellraw @a[tag=garrow.in_battle, distance=0..] { "text": "Golden Arrow returns to the shadows...", "color": "gray" }
+tellraw @a[tag=!garrow.in_battle, distance=0..] { "text": "The darkness recedes...", "color": "gray" }
 
 playsound entity.generic.extinguish_fire hostile @a[distance=..24] ~ ~ ~ 1 0.5
-particle large_smoke ~ ~ ~ 1.0 1.5 1.0 0.2 30 force
+particle large_smoke ~ ~ ~ 0.5 1 0.5 0 30 force
 
 bossbar remove goldark:golden_arrow
 

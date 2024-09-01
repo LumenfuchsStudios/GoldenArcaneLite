@@ -1,5 +1,5 @@
 ## # Ayden_Foxx | August 31st, 2024
-# Initializes Golden Arrow's dash ability; Must be followed by "run_dash" for proper effect.
+# Initializes Golden Arrow's dash ability; Must be followed by "run" for proper effect.
 
 particle cloud ~ ~0.5 ~ 0.5 0.5 0.5 0.5 30
 playsound entity.phantom.bite hostile @a[distance=..16] ~ ~ ~ 1 0.5
