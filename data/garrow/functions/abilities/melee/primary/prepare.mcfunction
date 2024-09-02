@@ -1,4 +1,4 @@
-## # Ayden_Foxx | September 1st, 2024
+## # Ayden_Foxx | September 1st - 2nd, 2024
 # LAMINA TENEBRIS: Golden Arrow's main Melee mode attack.
 # Prepare: The user is warned in advance of the next attack; Golden Arrow stops attacking and becomes temporarily vulnerable.
 
@@ -10,5 +10,8 @@ function garrow:events/vulnerability
 
 tag @s add goldark.stop_combat
 
-# A timer is set to the entity, counted down elsewhere. When depleted, the actual attack begins.
-scoreboard players set @s goldark.ability_timer 100
+# The ability clock is reset, as it will later be used for ticking the "run" function.
+scoreboard players reset @s goldark.ability_clock
+
+# Similarly, the weapon cooldown will be used to store useful data; It is also reset.
+scoreboard players reset @s goldark.weapon_cooldown

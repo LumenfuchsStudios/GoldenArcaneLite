@@ -11,5 +11,6 @@ data merge entity @s { NoAI: 1b, Invulnerable: 1b }
 function garrow:events/vulnerability
 
 tag @s add goldark.invulnerable
+tag @s add garrow.melee_primary
 
 tp @s ~ ~3 ~
