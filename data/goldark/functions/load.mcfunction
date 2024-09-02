@@ -25,6 +25,13 @@ scoreboard objectives add goldark.flee_timeout dummy
 # On Dark mode, Hard is checked instead; If below that, Dark mode is disabled and updated to the world's difficulty.
 scoreboard objectives add goldark.world_difficulty dummy
 
+# Some constants are set up for ease of coding (as a side effect, also always updated on every reload)
+scoreboard players set $EASY_MODE goldark.world_difficulty 1
+scoreboard players set $MEDIUM_MODE goldark.world_difficulty 2
+scoreboard players set $HARD_MODE goldark.world_difficulty 3
+scoreboard players set $DARK_MODE goldark.world_difficulty 4
+
 execute store result score $goldark_diff_reload goldark.world_difficulty run difficulty
 
-execute unless score $goldark_diff goldark.world_difficulty = $goldark_diff_reload goldark.world_difficulty unless score $goldark_diff goldark.world_difficulty matches 4 store result score $goldark_diff goldark.world_difficulty run difficulty
+execute unless score $goldark_diff goldark.world_difficulty = $DARK_MODE goldark.world_difficulty store result score $goldark_diff goldark.world_difficulty run difficulty
+execute if score $goldark_diff goldark.world_difficulty = $DARK_MODE goldark.world_difficulty unless score $goldark_diff_reload goldark.world_difficulty = $HARD_MODE goldark.world_difficulty store result score $goldark_diff goldark.world_difficulty run difficulty

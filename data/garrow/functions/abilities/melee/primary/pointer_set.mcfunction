@@ -2,7 +2,7 @@
 # Summons a pointer dummy (armor stand) at the invoked location.
 # For use with attack functions; Does nothing otherwise.
 
-execute align xyz run summon armor_stand ~0.5 ~-1 ~0.5 { CustomName: '{ "text": "GOLDARROW_POINTER" }', Tags: [ garrow.pointer_dummy ], Invisible: 1b, Invulnerable: 1b, Small: 1b }
+execute align xyz run summon armor_stand ~0.5 ~-1 ~0.5 { CustomName: '{ "text": "GARROW_POINTER" }', Tags: [ garrow.pointer_dummy ], Invisible: 1b, Invulnerable: 1b, Small: 1b }
 
 execute if block ~ ~1 ~ air run setblock ~ ~1 ~ light
 
