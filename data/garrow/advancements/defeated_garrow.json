@@ -3,7 +3,7 @@
         "icon": {
             "item": "minecraft:spectral_arrow"
         },
-        "title": "Fallen Warrior",
+        "title": "Fallen Deceit",
         "description": "Summon and defeat Golden Arrow.",
         "frame": "task",
         "show_toast": true,

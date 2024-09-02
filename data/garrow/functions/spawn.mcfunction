@@ -1,20 +1,17 @@
-## # Ayden_Foxx | August 31st - September 1st, 2024
+## # Ayden_Foxx | August 31st - September 2nd, 2024
 # Initializes a new Golden Arrow instance; If one already exists, it is erased.
 
 # Removal of any already-present Golden Arrow instance...
 
-tag @e[type=stray, tag=goldark.golden_arrow] add garrow.remove
+tag @e[type=stray, tag=goldark.golden_arrow] add garrow.replace
 
-execute at @e[tag=garrow.remove] run particle cloud ~ ~ ~ 1.0 1.0 1.0 0.5 50 force
-
-teleport @e[tag=garrow.remove] 0 -128 0
-kill @e[tag=garrow.remove]
+execute at @e[type=stray, tag=garrow.replace] run function garrow:events/despawn
 
 # Summoning of new Golden Arrow instance...
 
 summon stray ~ ~ ~ { CustomName: '[ { "text": "Golden Arrow", "color": "yellow" } ]', CustomNameVisible: 0b, Health: 100, PersistenceRequired: 1b, ActiveEffects: [ { Id: 11, Duration: -1, Amplifier: 1, ShowParticles: 0b }, { Id: 12, Duration: -1, ShowParticles: 0b } ], Attributes: [ { Name: "generic.armor", Base: 4f }, { Name: "generic.armor_toughness", Base: 4f }, { Name: "generic.attack_damage", Base: 3f }, { Name:"generic.knockback_resistance", Base: 0.2f }, { Name: "generic.follow_range", Base: 24f }, { Name:"generic.max_health", Base:100f }, { Name: "generic.movement_speed", Base: 0.3f } ], Tags: [ "goldark.golden_arrow" ] }
 
-execute as @e[tag=goldark.golden_arrow] run function garrow:set_armor
+execute as @e[type=stray, tag=goldark.golden_arrow] run function garrow:set_armor
 
 bossbar add goldark:golden_arrow {"text": "Golden Arrow", "color": "yellow" }
 bossbar set goldark:golden_arrow color yellow

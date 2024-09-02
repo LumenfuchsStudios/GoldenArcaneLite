@@ -5,12 +5,12 @@
             "nbt": "{ Enchantments: [ { id: vanishing_curse, lvl: 1 } ] }"
         },
         "title": "So That's How It Fell",
-        "description": "Defeat Golden Arrow in its vulnerable state.",
+        "description": "Defeat Golden Arrow in a vulnerable state.",
         "frame": "challenge",
         "show_toast": true,
         "announce_to_chat": true
     },
-    "parent": "minecraft:recipes/building_blocks/lime_stained_glass",
+    "parent": "garrow:defeated_garrow",
     "criteria": {
         "requirement": {
             "trigger": "player_killed_entity",
@@ -23,6 +23,6 @@
         }
     },
     "rewards": {
-        "experience": 20
+        "experience": 50
     }
 }

@@ -4,7 +4,7 @@
 
 scoreboard players remove @s goldark.ability_timer 1
 
-particle cloud ~ ~0.5 ~ 0 0 0 0.5 5
+particle entity_effect ~ ~2 ~ 0 0 0 0.5 10
 
 execute if score @s goldark.ability_timer matches 0 run function garrow:abilities/melee/primary/prepare_end
 

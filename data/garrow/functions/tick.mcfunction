@@ -1,4 +1,4 @@
-## # Ayden_Foxx | August 31st - September 1st, 2024
+## # Ayden_Foxx | August 31st - September 2nd, 2024
 # General code for Golden Arrow's AI behavior; Runs every tick.
 
 ## GENERIC
@@ -14,10 +14,10 @@ execute if block ~ ~8 ~ void_air at @p run tp @s ~ ~8 ~
 ## COMBAT
 
 # Swap weapons dynamically depending on player proximity; Disabled while dashing.
-execute if entity @s[tag=!garrow.dash_mode, tag=!goldark.invulnerable] if entity @a[tag=garrow.in_battle, distance=..24] run function garrow:weapons/swap_mode
+execute unless entity @s[tag=goldark.stop_combat] if entity @a[tag=garrow.in_battle, distance=..24] run function garrow:weapons/swap_mode
 
 # Run Golden Arrow's ability module while a player is nearby.
-execute unless entity @s[tag=goldark.invulnerable] if entity @a[tag=garrow.in_battle, distance=..24] run function garrow:abilities/main
+execute unless entity @s[tag=goldark.stop_combat] if entity @a[tag=garrow.in_battle, distance=..24] run function garrow:abilities/main
 
 ## RUNAWAY
 

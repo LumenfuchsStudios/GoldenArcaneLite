@@ -8,5 +8,7 @@ playsound entity.generic.extinguish_fire hostile @a[distance=..16] ~ ~ ~ 1 0.5
 
 function garrow:events/vulnerability
 
+tag @s add goldark.stop_combat
+
 # A timer is set to the entity, counted down elsewhere. When depleted, the actual attack begins.
 scoreboard players set @s goldark.ability_timer 100
