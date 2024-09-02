@@ -10,8 +10,6 @@ function garrow:events/vulnerability
 
 tag @s add goldark.stop_combat
 
-# The ability clock is reset, as it will later be used for ticking the "run" function.
+# Some scoreboards are reset, as they are later used for ticking and properly running the attack's functions.
 scoreboard players reset @s goldark.ability_clock
-
-# Similarly, the weapon cooldown will be used to store useful data; It is also reset.
-scoreboard players reset @s goldark.weapon_cooldown
+# scoreboard players reset @s goldark.weapon_cooldown
