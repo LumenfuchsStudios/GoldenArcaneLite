@@ -10,3 +10,5 @@ execute if items entity @s weapon.mainhand paper[minecraft:custom_data={ goldark
 execute if items entity @s weapon.mainhand paper[minecraft:custom_data={ goldark.spell_id: "weather_clear" }] run function goldark:spells/weather/clear/init
 execute if items entity @s weapon.mainhand paper[minecraft:custom_data={ goldark.spell_id: "weather_rain" }] run function goldark:spells/weather/rain/init
 execute if items entity @s weapon.mainhand paper[minecraft:custom_data={ goldark.spell_id: "weather_thunder" }] run function goldark:spells/weather/thunder/init
+
+scoreboard players reset @s[scores={ goldark.using_spell=1.. }] goldark.using_spell

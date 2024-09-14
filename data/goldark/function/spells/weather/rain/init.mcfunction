@@ -5,7 +5,9 @@
 # ? Run by: Player [Spell]
 
 
-execute if function goldark:spells/failsafe run summon marker ~ ~0.5 ~ { Tags: [ goldark.run_spell.weather_rain ] }
+execute unless function goldark:spells/failsafe run return fail
+
+summon marker ~ ~0.5 ~ { Tags: [ goldark.run_spell.weather_rain ] }
 
 scoreboard players set @e[type=marker, tag=goldark.run_spell.weather_rain, distance=..1, limit=1] goldark.ability_timer 100
 

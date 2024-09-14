@@ -5,8 +5,11 @@
 # ? Run by: GoldArk's Core Functions Manager
 
 
-## DATABASE (Initialize Spells)
+## SPELL MANAGEMENT (Database, Cooldown)
 execute as @a[scores={ goldark.using_spell=1.. }] at @s run function goldark:spells/database
+
+scoreboard players remove @a[scores={ goldark.ability_timer=1.. }] goldark.ability_timer 1
+scoreboard players reset @a[scores={ goldark.ability_timer=0 }] goldark.ability_timer
 
 
 ## Weather : Clear, Rain, Thunder
