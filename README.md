@@ -1,8 +1,6 @@
-![Golden Arcane's title logo](goldark_title_logo.png)
+# ![Golden Arcane - A world of magic within](/goldark_title_logo.png)
 
-# Golden Arcane: A world of magic within.
-
-> This is a 1.20.1 port of the original Minecraft: Bedrock Edition addon "The Golden Arcane".  
+> This is a Java Edition port of the original *Minecraft: Bedrock Edition* addon "The Golden Arcane".  
 > As with the original, many features are yet to be added, while others are still being ported to the Java version as well.
 
 **Golden Arcane** is a *Minecraft: Java Edition* datapack focusing on simple yet useful mechanics around a same material: gold.  
@@ -14,4 +12,23 @@ While working fine on its own, this pack is generally designed with the idea of 
 
 ## Features
 
-To-Do.
+* [DEVEL] *Golden Arrow*, a boss-like entity with unique abilities and novelty loot.
+  * Summon with `/function garrow:instance/spawn` (subject to change)
+* [DEVEL] Spells! Currently only with two examples ("Weather: Clear/Rain/Thunder" and "Smelt")
+* Soon!
+
+## Versioning
+
+This project follows the `MAJOR.MINOR.PATCH` model; The closer to the left a number is, the more impactful that version's changes are.
+
+Whenever a new version is available, the following rule applies for updating existing saves:
+
+* `PATCH` updates (`0.0.x`) are least likely to break existing saves, and may be downloaded safely.
+* `MINOR` updates (`0.x.0`) *should* work in older saves, but may still introduce some changes which may alter how one plays the game; A backup is advised before updating your world's datapack.
+* `MAJOR` updates (`x.0.0`) introduce breaking changes which are often incompatible with older saves. When updating to those, always have a backup your world beforehand, as corruption and data loss are possible and even likely to occur.
+
+The datapack's current version is: `0.1.0` (indev); Its target Minecraft version is `1.20.1`.
+
+## Platform
+
+**Golden Arcane** is the datapack for *Minecraft: Java Edition*. For the (legacy) *Minecraft: Bedrock Edition* addon, see [here](https://github.com/Ayden-Foxx/TheGoldenArcane-BE).
