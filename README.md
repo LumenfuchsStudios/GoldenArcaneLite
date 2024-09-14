@@ -27,8 +27,8 @@ Whenever a new version is available, the following rule applies for updating exi
 * `MINOR` updates (`0.x.0`) *should* work in older saves, but may still introduce some changes which may alter how one plays the game; A backup is advised before updating your world's datapack.
 * `MAJOR` updates (`x.0.0`) introduce breaking changes which are often incompatible with older saves. When updating to those, always have a backup your world beforehand, as corruption and data loss are possible and even likely to occur.
 
-The datapack's current version is: `0.1.0` (indev); Its target Minecraft version is `1.20.1`.
+The datapack's current version is: `0.2.1` (indev); Its target Minecraft version is `1.21.1`.
 
 ## Platform
 
-**Golden Arcane** is the datapack for *Minecraft: Java Edition*. For the (legacy) *Minecraft: Bedrock Edition* addon, see [here](https://github.com/Ayden-Foxx/TheGoldenArcane-BE).
+**Golden Arcane** is the datapack for *Minecraft: Java Edition*. For the (legacy) *Bedrock Edition* addon, see [here](https://github.com/Ayden-Foxx/TheGoldenArcane-BE).
