@@ -11,4 +11,6 @@ title @s[scores={ goldark.ability_timer=1.. }] actionbar { "translate": "goldark
 
 execute if entity @s[scores={ goldark.ability_timer=1.. }] run return 0
 
+scoreboard players set @s goldark.ability_timer 100
+
 return 1

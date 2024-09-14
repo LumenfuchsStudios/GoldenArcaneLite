@@ -7,6 +7,6 @@
 
 scoreboard players remove @s goldark.ability_timer 1
 
-particle crit ~ ~0.5 ~ 0.1 0.1 0.1 1 10
+particle crit ~ ~0.5 ~ 0.0 0.0 0.0 0.5 10
 
 execute if score @s goldark.ability_timer matches 0 run function goldark:spells/weather/thunder/end
